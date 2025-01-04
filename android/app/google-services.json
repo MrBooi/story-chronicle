@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "748109666639",
+    "project_id": "chronicle-852fa",
+    "storage_bucket": "chronicle-852fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748109666639:android:e83e487680bd2a616f0d3a",
+        "android_client_info": {
+          "package_name": "com.mrbooi.org.chronicle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaP45Sq9PkkzA0cp8AYvkTgva1ZXJf-Eg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
