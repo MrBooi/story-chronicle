@@ -1,6 +1,8 @@
 analyzer:
   errors:
     inference_failure_on_function_return_type: ignore
+    constant_identifier_names: ignore
+    avoid_void_async: ignore
 include: package:very_good_analysis/analysis_options.6.0.0.yaml
 linter:
   rules:
