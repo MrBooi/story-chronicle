@@ -3,6 +3,8 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:chronicle/core/di/get_it.dart';
+import 'package:chronicle/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/widgets.dart';
 
 class AppBlocObserver extends BlocObserver {
@@ -27,6 +29,8 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   };
 
   Bloc.observer = const AppBlocObserver();
+
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   setUp();
 
