@@ -23,23 +23,24 @@ class DefaultButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: Theme.of(context).elevatedButtonTheme.style?.copyWith(
-            backgroundColor: WidgetStateProperty.resolveWith(
-              (state) {
+              backgroundColor: WidgetStateProperty.resolveWith(
+                (state) {
+                  if (state.contains(WidgetState.disabled)) {
+                    return backgroundColor?.withOpacity(0.5);
+                  } else {
+                    return backgroundColor;
+                  }
+                },
+              ),
+              foregroundColor: WidgetStateProperty.resolveWith((state) {
                 if (state.contains(WidgetState.disabled)) {
-                  return backgroundColor?.withOpacity(0.5);
+                  return textColor?.withOpacity(0.5);
                 } else {
-                  return backgroundColor;
+                  return textColor;
                 }
-              },
+              }),
+              padding: WidgetStatePropertyAll(padding),
             ),
-            foregroundColor: WidgetStateProperty.resolveWith((state) {
-              if (state.contains(WidgetState.disabled)) {
-                return textColor?.withOpacity(0.5);
-              } else {
-                return textColor;
-              }
-            }),
-            padding: WidgetStatePropertyAll(padding)),
         child: Text(text ?? ''),
       ),
     );

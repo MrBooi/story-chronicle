@@ -8,9 +8,7 @@ part 'user_state.dart';
 
 class UserBloc extends Bloc<UserEvent, UserState> {
   UserBloc({required this.authRepository}) : super(UserState.initial()) {
-    on<UserEvent>((event, emit) {
-      on<LoginWithGoogleEvent>(onLoginWithGoogleEvent);
-    });
+    on<LoginWithGoogleEvent>(onLoginWithGoogleEvent);
   }
   final AuthRepository authRepository;
 
